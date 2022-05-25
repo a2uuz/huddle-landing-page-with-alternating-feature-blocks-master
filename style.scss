@@ -40,7 +40,8 @@ main {
 
 nav {
   padding: 1rem;
-  background: url(../images/bg-hero-mobile.svg) no-repeat scroll 100%;
+  background: $Very_Pale_Cyan url(../images/bg-hero-mobile.svg) no-repeat scroll
+    100%;
   background-size: cover;
 }
 
@@ -51,12 +52,17 @@ nav {
   img {
     width: 30%;
   }
-  p {
+  button {
     font-size: 0.8rem;
     background-color: white;
     padding: 0.5rem 1.5rem;
+    border: none;
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -82,6 +88,7 @@ section {
     border-radius: 2rem;
     padding: 0.8rem 3rem;
     margin-bottom: 2rem;
+    cursor: pointer;
     &:hover {
       opacity: 0.5;
     }
@@ -92,7 +99,7 @@ section {
 }
 
 main {
-  margin: 3rem 1rem;
+  margin: 8rem 1rem 3rem 1rem;
 
   .first {
     margin-bottom: 2rem;
@@ -120,32 +127,33 @@ main {
   .third {
     @extend .first;
   }
-}
-.fourth {
-  line-height: 2rem;
-  background-color: white;
-  position: relative;
-  top: 6rem;
-  z-index: 11;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 1rem;
-  padding: 3rem 1rem;
-  h1 {
-    font-size: 1rem;
-    color: $Very_Dark_Cyan;
-  }
-  button {
-    font-size: small;
-    font-weight: 800;
-    color: white;
-    background-color: $Pink;
-    border: none;
-    border-radius: 2rem;
-    padding: 0.8rem 3rem;
+  .fourth {
+    line-height: 2rem;
+    background-color: white;
+    position: relative;
+    top: 6rem;
+    z-index: 11;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    h1 {
+      font-size: 1rem;
+      color: $Very_Dark_Cyan;
+    }
+    button {
+      font-size: small;
+      font-weight: 800;
+      color: white;
+      background-color: $Pink;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.8rem 3rem;
+      cursor: pointer;
 
-    &:hover {
-      opacity: 0.5;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -158,6 +166,7 @@ footer {
   @include flex();
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-start;
   height: 130vh;
 }
 
@@ -168,8 +177,8 @@ footer {
   gap: 2rem;
   margin-bottom: 2rem;
 
-  img {
-    width: 40%;
+  .footer-logo {
+    max-width: 40%;
   }
 
   .location {
@@ -221,5 +230,91 @@ li:hover {
   span {
     color: $Very_Pale_Cyan;
     font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 779px) {
+  nav {
+   
+
+    .header {
+       padding: 1rem 3rem;
+      img {
+        width: 11%;
+      }
+    }
+
+    section {
+      @include flex();
+      justify-content: space-around;
+      // gap: 2rem;
+      .info {
+        width: 40%;
+        text-align: left;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: normal;
+      }
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  main {
+    @include flex();
+    flex-direction: column;
+    margin: 8rem 5rem 3rem 5rem;
+
+    .first {
+      @include flex();
+      flex-direction: row-reverse;
+      gap: 10rem;
+      img {
+        width: 30%;
+      }
+      .info {
+        text-align: left;
+        width: 35%;
+      }
+    }
+    .second {
+      flex-direction: row;
+    }
+    .fourth {
+      h1 {
+        font-size: 1.5rem;
+      }
+      width: 50%;
+    }
+  }
+
+  footer {
+    @include flex();
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-e;
+    height: 70vh;
+
+    .contact {
+      width: 30%;
+      align-self: center;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-self: center;
+      gap: 0rem 4rem;
+    }
+
+    .socials {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 5rem;
+    }
   }
 }
