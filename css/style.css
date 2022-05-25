@@ -18,7 +18,7 @@ main {
 
 nav {
   padding: 1rem;
-  background: url(../images/bg-hero-mobile.svg) no-repeat scroll 100%;
+  background: #ebfbff url(../images/bg-hero-mobile.svg) no-repeat scroll 100%;
   background-size: cover;
 }
 
@@ -42,13 +42,19 @@ nav {
   width: 30%;
 }
 
-.header p {
+.header button {
   font-size: 0.8rem;
   background-color: white;
   padding: 0.5rem 1.5rem;
+  border: none;
   border-radius: 2rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  opacity: 0.5;
 }
 
 section {
@@ -76,6 +82,7 @@ section button {
   border-radius: 2rem;
   padding: 0.8rem 3rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 section button:hover {
@@ -87,7 +94,7 @@ section img {
 }
 
 main {
-  margin: 3rem 1rem;
+  margin: 8rem 1rem 3rem 1rem;
 }
 
 main .first, main .second, main .third {
@@ -115,7 +122,7 @@ main .first p, main .second p, main .third p {
   color: #808d99;
 }
 
-.fourth {
+main .fourth {
   line-height: 2rem;
   background-color: white;
   position: relative;
@@ -128,12 +135,12 @@ main .first p, main .second p, main .third p {
   padding: 3rem 1rem;
 }
 
-.fourth h1 {
+main .fourth h1 {
   font-size: 1rem;
   color: #00252e;
 }
 
-.fourth button {
+main .fourth button {
   font-size: small;
   font-weight: 800;
   color: white;
@@ -141,9 +148,10 @@ main .first p, main .second p, main .third p {
   border: none;
   border-radius: 2rem;
   padding: 0.8rem 3rem;
+  cursor: pointer;
 }
 
-.fourth button:hover {
+main .fourth button:hover {
   opacity: 0.5;
 }
 
@@ -168,6 +176,9 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 130vh;
 }
 
@@ -192,8 +203,8 @@ footer {
   margin-bottom: 2rem;
 }
 
-.contact img {
-  width: 40%;
+.contact .footer-logo {
+  max-width: 40%;
 }
 
 .contact .location, .contact .tell {
@@ -258,5 +269,142 @@ li:hover {
 .socials span {
   color: #ebfbff;
   font-size: 0.6rem;
+}
+
+@media (min-width: 779px) {
+  nav .header {
+    padding: 1rem 3rem;
+  }
+  nav .header img {
+    width: 11%;
+  }
+  nav section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  nav section .info {
+    width: 40%;
+    text-align: left;
+  }
+  nav section h1 {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+  nav section img {
+    width: 50%;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 8rem 5rem 3rem 5rem;
+  }
+  main .first, main .second, main .third {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 10rem;
+  }
+  main .first img, main .second img, main .third img {
+    width: 30%;
+  }
+  main .first .info, main .second .info, main .third .info {
+    text-align: left;
+    width: 35%;
+  }
+  main .second {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .fourth {
+    width: 50%;
+  }
+  main .fourth h1 {
+    font-size: 1.5rem;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: flex-e;
+        -ms-flex-align: flex-e;
+            align-items: flex-e;
+    height: 70vh;
+  }
+  footer .contact {
+    width: 30%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer .menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-row-align: center;
+        align-self: center;
+    gap: 0rem 4rem;
+  }
+  footer .socials {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
