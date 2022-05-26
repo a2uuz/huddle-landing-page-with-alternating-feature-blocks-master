@@ -62,15 +62,18 @@ section {
   text-align: center;
 }
 
-section h1 {
+section h2 {
   font-size: 1.5rem;
   color: #00252e;
+  line-height: 2rem;
+  margin-bottom: 2rem;
 }
 
 section p {
   color: #00252e;
   font-size: 1rem;
   margin-bottom: 2rem;
+  line-height: 1.5rem;
 }
 
 section button {
@@ -104,7 +107,7 @@ main .first, main .second, main .third {
   padding: 2rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 1rem;
+  border-radius: .8rem;
 }
 
 main .first img, main .second img, main .third img {
@@ -112,30 +115,32 @@ main .first img, main .second img, main .third img {
   margin-bottom: 2rem;
 }
 
-main .first h1, main .second h1, main .third h1 {
+main .first h2, main .second h2, main .third h2 {
   font-size: 1rem;
   color: #00252e;
+  margin-bottom: 1rem;
 }
 
 main .first p, main .second p, main .third p {
   font-size: smaller;
   color: #808d99;
+  line-height: 1.5rem;
 }
 
 main .fourth {
   line-height: 2rem;
   background-color: white;
   position: relative;
-  top: 6rem;
+  top: 7rem;
   z-index: 11;
   text-align: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 1rem;
+  border-radius: .8rem;
   padding: 3rem 1rem;
 }
 
-main .fourth h1 {
+main .fourth h2 {
   font-size: 1rem;
   color: #00252e;
 }
@@ -176,9 +181,6 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   height: 130vh;
 }
 
@@ -259,6 +261,8 @@ li:hover {
   color: #ebfbff;
   gap: 1rem;
   margin-bottom: 0.2rem;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .socials .icons:hover,
@@ -295,9 +299,10 @@ li:hover {
     width: 40%;
     text-align: left;
   }
-  nav section h1 {
+  nav section h2 {
     font-size: 3rem;
     font-weight: normal;
+    line-height: 3.5rem;
   }
   nav section img {
     width: 50%;
@@ -350,7 +355,7 @@ li:hover {
   main .fourth {
     width: 50%;
   }
-  main .fourth h1 {
+  main .fourth h2 {
     font-size: 1.5rem;
   }
   footer {
@@ -369,9 +374,6 @@ li:hover {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: flex-e;
-        -ms-flex-align: flex-e;
-            align-items: flex-e;
     height: 70vh;
   }
   footer .contact {
@@ -387,24 +389,27 @@ li:hover {
         grid-template-columns: 1fr 1fr;
     -ms-grid-row-align: center;
         align-self: center;
-    gap: 0rem 4rem;
+    gap: 0rem 6rem;
   }
   footer .socials {
-    -ms-flex-item-align: center;
-        align-self: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     gap: 5rem;
+  }
+  footer .socials .icons {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 /*# sourceMappingURL=style.css.map */
