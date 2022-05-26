@@ -70,14 +70,17 @@ section {
   margin: 4rem 1rem;
   text-align: center;
 
-  h1 {
+  h2 {
     font-size: 1.5rem;
     color: $Very_Dark_Cyan;
+    line-height: 2rem;
+    margin-bottom: 2rem;
   }
   p {
     color: $Very_Dark_Cyan;
     font-size: 1rem;
     margin-bottom: 2rem;
+    line-height: 1.5rem;
   }
   button {
     font-size: small;
@@ -107,18 +110,20 @@ main {
     line-height: 1.2rem;
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 1rem;
+    border-radius: .8rem;
     img {
       width: 100%;
       margin-bottom: 2rem;
     }
-    h1 {
+    h2 {
       font-size: 1rem;
       color: $Very_Dark_Cyan;
+      margin-bottom: 1rem;
     }
     p {
       font-size: smaller;
       color: $Grayish_Blue;
+      line-height: 1.5rem;
     }
   }
   .second {
@@ -131,13 +136,13 @@ main {
     line-height: 2rem;
     background-color: white;
     position: relative;
-    top: 6rem;
+    top: 7rem;
     z-index: 11;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 1rem;
+    border-radius: .8rem;
     padding: 3rem 1rem;
-    h1 {
+    h2 {
       font-size: 1rem;
       color: $Very_Dark_Cyan;
     }
@@ -166,7 +171,6 @@ footer {
   @include flex();
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
   height: 130vh;
 }
 
@@ -223,6 +227,7 @@ li:hover {
     color: $Very_Pale_Cyan;
     gap: 1rem;
     margin-bottom: 0.2rem;
+    align-self: center;
     &:hover {
       color: $Pink;
     }
@@ -235,10 +240,8 @@ li:hover {
 
 @media (min-width: 779px) {
   nav {
-   
-
     .header {
-       padding: 1rem 3rem;
+      padding: 1rem 3rem;
       img {
         width: 11%;
       }
@@ -252,9 +255,10 @@ li:hover {
         width: 40%;
         text-align: left;
       }
-      h1 {
+      h2 {
         font-size: 3rem;
         font-weight: normal;
+        line-height: 3.5rem;
       }
       img {
         width: 50%;
@@ -283,7 +287,7 @@ li:hover {
       flex-direction: row;
     }
     .fourth {
-      h1 {
+      h2 {
         font-size: 1.5rem;
       }
       width: 50%;
@@ -294,7 +298,7 @@ li:hover {
     @include flex();
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-e;
+    
     height: 70vh;
 
     .contact {
@@ -305,16 +309,16 @@ li:hover {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-self: center;
-      gap: 0rem 4rem;
+      gap: 0rem 6rem;
     }
 
     .socials {
-      align-self: center;
-      display: flex;
+      @include flex();
       flex-direction: column;
-      justify-content: space-around;
-      align-items: flex-start;
       gap: 5rem;
+      .icons{
+      align-self: flex-start;
+      }
     }
   }
 }
